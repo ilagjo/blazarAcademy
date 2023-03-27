@@ -79,17 +79,37 @@ header .logo {
 
 .layout {
   display: flex;
-  background-color: grey;
   justify-content: center;
+  color:white;
+}
+
+.layout .layout-row {
+  display: flex;
+}
+
+.layout .card-layout {
+  padding: 30px;
 }
 
 .layout .card-layout .circle-icon {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
 }
 
-.card-layout {
-  
+.layout .layout-row #one {
+  background-color: #111111;
+}
+
+.layout .layout-row #two {
+  background-color: #858e99;
+}
+
+.layout .layout-row #three {
+  background-color: #478ac9;
+}
+
+.layout .layout-row #four {
+  background-color: #77aad9;
 }
 
 
