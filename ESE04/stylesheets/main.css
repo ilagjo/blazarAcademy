@@ -1,0 +1,192 @@
+* {
+  box-sizing: content-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+header {
+  background-color: white;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1); /* mi serve solo come riscontro ELIMINARE */
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+
+header .logo {
+  float: left;
+  font-size: 25px;
+  padding: 10px 20px;
+}
+
+.menu {
+  clear: both;
+  display: inline-block;
+  padding: 0 5px 0 0;
+  margin: 0 0 0 -500px;
+  position: fixed;
+  list-style: none;
+  overflow: hidden;
+  background-color: black;
+  /* height */
+  z-index: 999999999;
+  width: 250px;
+  
+  /* margin left: -255px;
+     transition: margin-left .2s ease-out; /*confronto con altri effetti */
+}
+
+.menu .xmark {
+  display: inline;
+  float: right;
+}
+
+.menu li a {
+  clear: both;
+  display: block; /*così non c'è bisogno di centrare esattamente la scritta*/
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.menu li a:hover {
+  color: grey;
+}
+
+.menu-icon {
+  padding: 20px;
+  position: relative;
+  float: right;
+  cursor: pointer; /* per finestra desktop ridimensionata */
+}
+
+.menu-icon .nav-icon {
+  background-color: black;
+}
+
+.menu-icon .nav-icon:hover {
+  background-color: orangered;
+}
+
+.layout {
+  display: flex;
+}
+.card-layout {
+  background-color: white;
+}
+.card-layout .circle-icon {
+  border: 1px solid black; /* riscontro ELIMINARE */
+  border-radius: 50px;
+}
+
+
+
+/* non è finito, lo tengo come riferimento finché non inserisco l'immagine 
+.card-layout .circle-icon {
+    
+    display: block;
+    background-color: black;
+    width: 18px;
+    height: 2px;
+    position: relative;
+    transform: rotate(45deg);
+}
+
+.card-layout .circle-icon::after {
+    content:"";
+    display: block;
+    background-color: black;
+    width: 18px;
+    height: 2px;    
+    transform: rotate(-90deg);
+    transform: translate(6,6);
+
+} 
+ANGLE **********/
+
+/*** ALTERNATIVA ALL'IMMAGINE, uno span in html
+  header .menu-icon .nav-icon {
+  display: block;
+  width: 18px;
+  height: 2px;
+  position: relative;
+  transition: background-color .2s ease-out;
+}
+
+header .menu-icon .nav-icon::before {
+  background-color: grey;
+  content:"";
+  display: block;
+  height: 100%;
+  width: 100%;
+  transition: all 2s ease-out;
+  position: absolute;
+  top: 5px;
+}
+
+header .menu-icon .nav-icon::after {
+  background-color: grey;
+  content:"";
+  display: block;
+  height: 100%;
+  width: 100%;
+  transition: all 2s ease-out;
+  position: absolute;
+  top: -5px;
+}
+
+FINE ALTERNATIVA ***/
+
+/*** ***/
+header .menu-btn {
+  display: none;
+}
+
+header .menu-btn:checked ~ .menu-icon > .nav-icon {
+  background-color: orangered; /* resta arancione fino al click successivo */
+}
+
+header .menu-btn:checked ~ .menu {
+  /* margin-left: 0; /* altro metodo */
+  transform: translateX(357px);
+  transition-duration: 1s;
+}
+
+/*NO, torna indietro!
+header .menu-btn:checked ~ .menu {
+ animation-duration: 3s;
+ animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {margin-left: -255px;}
+  to {margin-left: 0;}
+}
+
+/*** posso fare la x a partire dal uno span, come per l'hamburger
+comunque non aggiungerò altre immagini qui***/
+/*** se avessi lasciato .menu nell'header:
+header .menu-btn:checked ~ .menu-icon .nav-icon {
+  background-color: transparent; /* non voglio perdere le proprietà */
+
+/*}*/
+/*.header .menu-btn:checked ~ .menu-icon .nav-icon::before {
+  transform: rotate(-45deg);
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon::after {
+  transform: rotate(45deg);
+}*/
+
+section img {
+  z-index: -200;
+  max-width: 100%;
+}
