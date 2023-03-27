@@ -79,14 +79,19 @@ header .logo {
 
 .layout {
   display: flex;
+  background-color: grey;
+  justify-content: center;
 }
+
+.layout .card-layout .circle-icon {
+  width: 40px;
+  height: 40px;
+}
+
 .card-layout {
-  background-color: white;
+  
 }
-.card-layout .circle-icon {
-  border: 1px solid black; /* riscontro ELIMINARE */
-  border-radius: 50px;
-}
+
 
 
 
