@@ -3,14 +3,16 @@
 }
 
 body {
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-  background-color: white;
+
+    font-family: 'Open Sans',sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    background-color: white;
 }
 
 a {
   color: white;
-  text-decoration: none;
 }
 
 header {
@@ -53,6 +55,7 @@ header .logo {
   clear: both;
   display: block; /*così non c'è bisogno di centrare esattamente la scritta*/
   color: white;
+  text-decoration: none;
   padding: 20px;
   text-align: center;
 }
@@ -76,20 +79,18 @@ header .logo {
   background-color: orangered;
 }
 
+/*** SECTION ***/
+
 .layout .layout-row {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .layout .card-layout {
   padding: 30px;
-  display: flex;
+  display: block;
   color: white;
-}
-
-.layout .card-layout .circle-icon {
-  width: 50px;
-  height: 50px;
 }
 
 .layout .layout-row #one {
@@ -107,6 +108,17 @@ header .logo {
 .layout .layout-row #four {
   background-color: #77aad9;
 }
+
+.card-layout .circle-icon {
+margin-top: 30px;
+margin-bottom: 0;
+height: 64px;
+width: 64px;
+text-align:left;
+flex-shrink: 0;
+display: block;
+}
+
 
 /* non è finito, lo tengo come riferimento finché non inserisco l'immagine 
 .card-layout .circle-icon {
@@ -207,4 +219,38 @@ header .menu-btn:checked ~ .menu-icon .nav-icon {
 section img {
   z-index: -200;
   max-width: 100%;
+}
+
+
+
+footer {
+color: white;
+background-color: black;
+}
+
+footer div {
+  text-align: center;
+}
+
+footer p  {
+    width: 417px;
+    padding:0;
+    margin-top: 49px;
+    margin-bottom: 49px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.backlink {
+  text-align: center;
+  padding: 1em;
+}
+.backlink a {
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+}
+
+@media (max-width: 575px) {
+  .layout
 }
