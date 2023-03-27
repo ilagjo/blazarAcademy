@@ -21,7 +21,6 @@ header {
   z-index: 1;
 }
 
-
 header .logo {
   float: left;
   font-size: 25px;
@@ -40,7 +39,7 @@ header .logo {
   /* height */
   z-index: 999999999;
   width: 250px;
-  
+
   /* margin left: -255px;
      transition: margin-left .2s ease-out; /*confronto con altri effetti */
 }
@@ -77,18 +76,15 @@ header .logo {
   background-color: orangered;
 }
 
-.layout {
-  display: flex;
-  justify-content: center;
-  color:white;
-}
-
 .layout .layout-row {
   display: flex;
+  justify-content: center;
 }
 
 .layout .card-layout {
   padding: 30px;
+  display: flex;
+  color: white;
 }
 
 .layout .card-layout .circle-icon {
@@ -111,9 +107,6 @@ header .logo {
 .layout .layout-row #four {
   background-color: #77aad9;
 }
-
-
-
 
 /* non è finito, lo tengo come riferimento finché non inserisco l'immagine 
 .card-layout .circle-icon {
