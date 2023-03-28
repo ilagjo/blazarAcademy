@@ -18,10 +18,10 @@ function staircase(n) {
     
     // Aggiunge i simboli # in quantità diversa per ogni livello
     for (let k = 1; k <= i; k++) {
-      leyer += '#';
+      stair += '#';
     }
     
     // Stampa la riga che risulta da ogni iterazione
-    console.log(layer);
+    console.log(stair);
   }
 }
