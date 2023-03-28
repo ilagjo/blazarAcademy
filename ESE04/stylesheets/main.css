@@ -11,10 +11,6 @@ body {
     background-color: white;
 }
 
-a {
-  color: white;
-}
-
 header {
   background-color: white;
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1); /* mi serve solo come riscontro ELIMINARE */
@@ -38,7 +34,7 @@ header .logo {
   list-style: none;
   overflow: hidden;
   background-color: black;
-  /* height */
+  height: 100vh;
   z-index: 999999999;
   width: 250px;
 
@@ -241,16 +237,34 @@ footer p  {
     margin-right: auto;
 }
 
+ /*** BACKLINK SECTION ***/
+
 .backlink {
   text-align: center;
   padding: 1em;
 }
-.backlink a {
-    border-top-width: 0;
-    border-left-width: 0;
-    border-right-width: 0;
+
+.backlink > * {
+  display:inline-block;
 }
 
+.backlink p {
+  margin: 0 5px;
+}
+
+@media (max-width: 1199px) 
+{
+  .layout-wrap {
+    width: 940px;
+    margin-top: -60px;
+  }
+}
+@media (max-width: 991px) {
+  .layoutwrap {
+    width: 720px;
+    margin: -69px auto;
+  }
+}
 @media (max-width: 575px) {
   .layout
 }
