@@ -1,5 +1,4 @@
-/* Medium difficulty LEADERBOARD
-https://www.hackerrank.com/challenges/climbing-the-leaderboard?isFullScreen=true */
+/* Medium difficulty LEADERBOARD https://www.hackerrank.com/challenges/climbing-the-leaderboard?isFullScreen=true */
 
 function climbingLeaderboard(ranked, player) {
 
