@@ -1,35 +1,11 @@
+/* Medium difficulty LEADERBOARD
+https://www.hackerrank.com/challenges/climbing-the-leaderboard?isFullScreen=true */
+
 function climbingLeaderboard(ranked, player) {
-    
-    const scores = [ranked[0]];
-    const ranks = [1];
-    for (let i = 1; i < ranked.length; i++) {
-      if (ranked[i] !== ranked[i-1]) {
-        scores.push(ranked[i]);
-        ranks.push(ranks[ranks.length-1]+1);
-      }
-    }
-    
-    
-    const result = [];
-    for (let score of player) {
-      const rank = binarySearch(scores, score);
-      result.push(rank);
-    }
-    return result;
-  }
+  // Build a new array of unique scores with their rank
+  const scores = [ranked[0], ...ranked.filter((val, idx) => val !== ranked[idx-1]).slice(1)];
+  const ranks = scores.reduce((acc, val, idx) => [...acc, (idx === 0 || val !== scores[idx-1]) ? acc[idx]+1 : acc[idx]], [1]);
   
-  function binarySearch(arr, val) {
-    let left = 0;
-    let right = arr.length - 1;
-    while (left <= right) {
-      const mid = Math.floor((left + right) / 2);
-      if (arr[mid] === val) {
-        return mid + 1;
-      } else if (arr[mid] < val) {
-        right = mid - 1;
-      } else {
-        left = mid + 1;
-      }
-    }
-    return left + 1;
-  }
+  // Find the rank for each player's score
+  return player.map(score => ranks.findIndex(rank => score >= rank) + 1);
+}
