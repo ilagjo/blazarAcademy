@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Candidati</title>
+</head>
+
+<body>
+  <h1>Candidatura</h1>
+  <h2>Dati anagrafici</h2>
+  <form action="submit.php" method="post">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" placeholder="Andrea" required>
+
+    <label for="cognome">Cognome:</label>
+    <input type="text" id="cognome" name="cognome" placeholder="Rossi" required><br>
+
+    <label for="dataNascita">Data di nascita:</label>
+    <input type="date" id="dataNascita" name="dataNascita" required><br>
+
+    <label for="residenza">Città di residenza:</label>
+    <input type="text" id="residenza" name="residenza" placeholder="Milano" required>
+    <hr>
+    <h2>Il tuo background</h2>
+    <label for="motivazione">Perché vorresti prendere parte all'Academy?</label><br>
+    <textarea id="motivazione" name="motivazione" rows="5" cols="30" placeholder="Le mie aspettative..."></textarea><br>
+    <label for="competenze">Competenze:</label><br>
+    <input type="checkbox" id="backend" name="competenze" value="back-end">
+    <label for="backend">Backend</label><br>
+    <input type="checkbox" id="frontend" name="competenze" value="front-end">
+    <label for="frontend">Frontend</label><br>
+    <div id="addendum"></div>
+    <input type="checkbox" id="altro" name="competenze" value="altro">
+    <label for="altro">Altro:</label>
+    <label for="altro"></label>
+    <textarea id="altro" name="altro" rows="1" cols="30"></textarea><br>
+    </div>
+    <hr>
+    <label for="privacy">Ho letto e accetto</label>
+    <input type="radio" id="privacy" name="privacy" value="accetto" required>
+    <label for="condizioni">la <a href="">privacy policy</a></label><br><br>
+
+    <label for="file">Carica il tuo CV:</label><br>
+    <input type="file" id="file" name="file"><br><br>
+
+
+    <input type="submit" value="Invia">
+  </form>
+
+</body>
+
+</html>
