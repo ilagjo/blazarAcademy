@@ -3,79 +3,65 @@
 }
 
 body {
-
-    font-family: 'Open Sans',sans-serif;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin: 0;
-    background-color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+  background-color: white;
 }
 
 header {
   background-color: white;
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1); /* mi serve solo come riscontro ELIMINARE */
-  position: fixed;
+  /*position: fixed;*/
   width: 100%;
   z-index: 1;
+  color: #111111;
 }
 
+header .nav-container {
+  display: flex;
+  justify-content: space-between;
+  flex: 0 0 auto;
+}
+
+
 header .logo {
-  float: left;
-  font-size: 25px;
+  /*float: left;*/
   padding: 10px 20px;
 }
 
-.menu {
-  clear: both;
-  display: inline-block;
-  padding: 0 5px 0 0;
-  margin: 0 0 0 -500px;
-  position: fixed;
-  list-style: none;
-  overflow: hidden;
-  background-color: black;
-  height: 100vh;
-  z-index: 999999999;
-  width: 250px;
-
-  /* margin left: -255px;
-     transition: margin-left .2s ease-out; /*confronto con altri effetti */
+@media (min-width: 1199px) {
+  header .nav-container {
+    max-width: 1140px;
+    height: 80px;
+  }
 }
 
-.menu .xmark {
-  display: inline;
-  float: right;
-}
-
-.menu li a {
-  clear: both;
-  display: block; /*così non c'è bisogno di centrare esattamente la scritta*/
-  color: white;
-  text-decoration: none;
-  padding: 20px;
-  text-align: center;
-}
-
-.menu li a:hover {
-  color: grey;
-}
-
-.menu-icon {
-  padding: 20px;
-  position: relative;
-  float: right;
-  cursor: pointer; /* per finestra desktop ridimensionata */
-}
-
-.menu-icon .nav-icon {
-  background-color: black;
-}
-
-.menu-icon .nav-icon:hover {
-  background-color: orangered;
-}
 
 /*** SECTION ***/
+
+section img {
+  z-index: -200;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  overflow: hidden;
+  object-fit: cover;
+  display: block;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.layout {
+  margin-top: -65px;
+}
+
+.layout .layout-wrap {
+  display: flex;
+  justify-content: center;
+}
 
 .layout .layout-row {
   display: flex;
@@ -87,6 +73,7 @@ header .logo {
   padding: 30px;
   display: block;
   color: white;
+  
 }
 
 .layout .layout-row #one {
@@ -106,15 +93,193 @@ header .logo {
 }
 
 .card-layout .circle-icon {
-margin-top: 30px;
-margin-bottom: 0;
-height: 64px;
-width: 64px;
-text-align:left;
-flex-shrink: 0;
-display: block;
+  margin-top: 30px;
+  margin-bottom: 0;
+  height: 64px;
+  width: 64px;
+  text-align: left;
+  flex-shrink: 0;
+  display: block;
 }
 
+.credits {
+  text-align: center;
+}
+
+footer {
+  color: white;
+  background-color: #111111;
+}
+
+footer div {
+  text-align: center;
+  padding: 50px;
+}
+
+footer p {
+  width: 417px;
+  padding: 0;
+  margin-top: 49px;
+  margin-bottom: 49px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*** BACKLINK SECTION ***/
+
+.backlink {
+  text-align: center;
+  padding: 1em;
+  margin: 0;
+  background-color: #111111;
+}
+
+.backlink > * {
+  display: inline-block;
+}
+
+.backlink p {
+  margin: 0 5px;
+  color: white;
+}
+
+@media (min-width: 1199px) {
+  .nav-icon,
+  .menu,
+  .menu-btn,
+  .menu-icon {
+    display: none;
+  }
+  .navbar li {
+    clear: both;
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .navbar li .page {
+    color: grey;
+    text-decoration: none;
+  }
+
+  .navbar .page:active {
+    color: #478ac9;
+  }
+  .menu .xmark {
+    display: none;
+  }
+  .layout-wrap {
+    width: 940px;
+    margin-top: -60px;
+  }
+}
+
+@media (max-width: 575px) {
+  .menu {
+    clear: both;
+    display: inline-block;
+    padding: 0 5px 0 0;
+    margin: 0 0 0 -500px;
+    position: fixed;
+    list-style: none;
+    overflow: hidden;
+    background-color: black;
+    height: 100vh;
+    z-index: 999999999;
+    width: 250px;
+
+    /* margin left: -255px;
+       transition: margin-left .2s ease-out; /*confronto con altri effetti */
+  }
+
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 80px;
+    width: 340px;
+    margin: 0 auto;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .logo {
+    max-width: 64px;
+    max-height: 64px;
+    width: 100%;
+    height: 100%;
+    margin-left: 0px;
+  }
+
+  .menu-icon {
+    padding: 20px;
+    position: relative;
+    float: right;
+    cursor: pointer; /* per finestra desktop ridimensionata */
+  }
+
+  .menu-icon .nav-icon {
+    background-color: black;
+  }
+
+  .menu-icon .nav-icon:hover {
+    background-color: orangered;
+  }
+
+  header .menu-btn {
+    display: none;
+  }
+
+  header .menu-btn:checked ~ .menu-icon > .nav-icon {
+    background-color: orangered; /* resta arancione fino al click successivo */
+  }
+
+  header .menu-btn:checked ~ .menu {
+    /* margin-left: 0; /* altro metodo */
+    transform: translateX(357px);
+    transition-duration: 2s;
+  }
+  /* Non sto usando javascript;
+   /* un'idea per non far ritirare bruscamente il menu,
+   /* ma pessimo effetto al refresh: */
+  /*
+  header .menu-btn:not(:checked) ~ .menu {
+    transform: translateX(-357px);
+    transition-duration: 2s;
+  } */
+
+  .menu .xmark {
+    display: inline;
+    float: right;
+  }
+
+  .menu li a {
+    clear: both;
+    display: block; /*così non c'è bisogno di centrare esattamente la scritta*/
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .menu li a:hover {
+    color: grey;
+  }
+
+  section .background {
+    height: 370px;
+    margin-top: 0;
+    margin-right: initial;
+    margin-left: initial;
+  }
+
+  .layout-row {
+  
+  }
+  footer {
+  }
+}
 
 /* non è finito, lo tengo come riferimento finché non inserisco l'immagine 
 .card-layout .circle-icon {
@@ -173,19 +338,6 @@ header .menu-icon .nav-icon::after {
 FINE ALTERNATIVA ***/
 
 /*** ***/
-header .menu-btn {
-  display: none;
-}
-
-header .menu-btn:checked ~ .menu-icon > .nav-icon {
-  background-color: orangered; /* resta arancione fino al click successivo */
-}
-
-header .menu-btn:checked ~ .menu {
-  /* margin-left: 0; /* altro metodo */
-  transform: translateX(357px);
-  transition-duration: 1s;
-}
 
 /*NO, torna indietro!
 header .menu-btn:checked ~ .menu {
@@ -211,67 +363,3 @@ header .menu-btn:checked ~ .menu-icon .nav-icon {
 .header .menu-btn:checked ~ .menu-icon .nav-icon::after {
   transform: rotate(45deg);
 }*/
-
-section img {
-  z-index: -200;
-  max-width: 100%;
-}
-
-.credits {
-  text-align: center;
-  
-}
-
-footer {
-color: white;
-background-color: #111111;
-}
-
-footer div {
-  text-align: center;
-  padding: 50px;
-}
-
-footer p  {
-    width: 417px;
-    padding: 0;
-    margin-top: 49px;
-    margin-bottom: 49px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
- /*** BACKLINK SECTION ***/
-
-.backlink {
-  text-align: center;
-  padding: 1em;
-  margin:0;
-  background-color: #111111;
-}
-
-.backlink > * {
-  display:inline-block;
-}
-
-.backlink p {
-  margin: 0 5px;
-  color: white;
-}
-
-@media (max-width: 1199px) 
-{
-  .layout-wrap {
-    width: 940px;
-    margin-top: -60px;
-  }
-}
-@media (max-width: 991px) {
-  .layoutwrap {
-    width: 720px;
-    margin: -69px auto;
-  }
-}
-@media (max-width: 575px) {
-  
-}

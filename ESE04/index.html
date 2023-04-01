@@ -15,38 +15,53 @@
   </head>
 
   <body>
+    
     <header class="header">
-      <a href="#" class="logo"
-        ><img src="./assets/images/default-logo.png" alt="Logo"
-      /></a>
-      <input type="checkbox" id="menu-btn" class="menu-btn" />
-      <label for="menu-btn" class="menu-icon">
-        <img
-          class="nav-icon"
-          src="./assets/images/bars-solid-inv.png"
-          style="width: 26px; height: 26px"
-        />
-      </label>
-      
-      <ul class="menu">
-        <label for="menu-btn"><li class="xmark">
+      <div class="nav-container">
+        <a href="#" class="logo"
+          ><img src="./assets/images/default-logo.png" alt="Logo"
+        /></a>
+        <ul class="navbar">
+          <li><a class="page" href="">Page 2</a></li>
+          <li><a class="page" href="">Page 4</a></li>
+          <li><a class="page" href="">Page 5</a></li>
+          <li><a class="page" href="#">Page 1</a></li>
+          <li><a class="page" href="">Page 3</a></li>
+        </ul>
+        <input type="checkbox" id="menu-btn" class="menu-btn" />
+        <label for="menu-btn" class="menu-icon">
           <img
-            src="./assets/images/xmark.png"
-            alt="x: close menu"
-            style="width: 24px; height: 32px"
+            class="nav-icon"
+            src="./assets/images/bars-solid-inv.png"
+            style="width: 26px; height: 26px"
           />
-        </li></label>
-        <li><a href="">Page 2</a></li>
-        <li><a href="">Page 4</a></li>
-        <li><a href="">Page 5</a></li>
-        <li><a href="#">Page 1</a></li>
-        <li><a href="">Page 3</a></li>
-      </ul>
+        </label>
+        
+        <ul class="menu">
+          <li class="xmark">
+            <label for="menu-btn">
+              <img
+                src="./assets/images/xmark.png"
+                alt="x: close menu"
+                style="width: 24px; height: 32px"
+              />
+            </label>
+          </li>
+          <li><a class="page" href="">Page 2</a></li>
+          <li><a class="page" href="">Page 4</a></li>
+          <li><a class="page" href="">Page 5</a></li>
+          <li><a class="page" href="#">Page 1</a></li>
+          <li><a class="page" href="">Page 3</a></li>
+        </ul>
+      </div>
     </header>
 
     <section>
-      <!--devo cambiare e impostare l'immagine come immagine di sfondo -->
-      <img src="./assets/images/fesrfmin.jpg" alt="woman with camera" />
+      <img
+        class="background"
+        src="./assets/images/fesrfmin.jpg"
+        alt="woman with camera"
+      />
       <div class="layout-wrap">
         <div class="layout">
           <div class="layout-row">
@@ -113,17 +128,28 @@
           </div>
         </div>
       </div>
-      <p style="text-align: center">Image from 
-        <a href="https://www.freepik.com/free-photos-vectors/technology" target="_blank">Freepik</a>
+      <p class="credits">
+        Image from
+        <a
+          href="https://www.freepik.com/free-photos-vectors/technology"
+          target="_blank"
+          >Freepik</a
+        >
       </p>
     </section>
     <footer>
       <div>
-        <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+        <p>
+          Sample text. Click to select the text box. Click again or double click
+          to start editing the text.
+        </p>
       </div>
     </footer>
     <section class="backlink">
-      <a href=""><span>Template</span></a><p><span>created with </span></p><a href=""><span>Nicepage</span></a>.
+      <a href=""><span>Template</span></a>
+      <p><span>created with </span></p>
+      <a href=""><span>Nicepage</span></a
+      >.
     </section>
   </body>
 </html>
