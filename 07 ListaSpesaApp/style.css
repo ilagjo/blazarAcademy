@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    position: relative;
+  }
+  
+  #container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 10px;
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  #header {
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    font-size: 1.5rem;
+  }
+  
+  #input-container {
+    display: flex;
+    align-items: center;
+    grid-row: 1;
+  }
+
+  label {
+    font-family: 'Caveat', cursive;
+    font-size: 1.3rem;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    font-size: 18px;
+  }
+  
+  li:last-child {
+    border-bottom: none;
+  }
+  
+  li.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
+  
+  button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100px;
+    margin: auto;
+    right: 0;
+  }
+  
+  #add-btn {
+    background-color: #4CAF50;
+  }
+  
+  #fill-btn {
+    background-color: #2a7f2d;
+  }
+  
+  #archive-btn {
+    background-color: #f44336;
+  }
+  
