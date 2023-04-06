@@ -1,10 +1,14 @@
 /* Medium difficulty LEADERBOARD https://www.hackerrank.com/challenges/climbing-the-leaderboard?isFullScreen=true */
 
 function climbingLeaderboard(ranked, player) {
-
-  const scores = [ranked[0], ...ranked.filter((val, idx) => val !== ranked[idx-1]).slice(1)];
-  const ranks = scores.reduce((acc, val, idx) => [...acc, (idx === 0 || val !== scores[idx-1]) ? acc[idx]+1 : acc[idx]], [1]);
-  
-  return player.map(score => ranks.findIndex(rank => score >= rank) + 1);
+  const uniqueScores = [...new Set(ranked)];
+  const playerRankings = player.map(score => {
+    uniqueScores.push(score);
+    uniqueScores.sort((a, b) => b - a);
+    const rank = uniqueScores.indexOf(score) + 1;
+    uniqueScores.splice(rank - 1, 1);
+    return rank;
+  });
+  return playerRankings;
 }
 
