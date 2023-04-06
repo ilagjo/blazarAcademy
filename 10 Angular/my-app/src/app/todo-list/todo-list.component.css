@@ -1,0 +1,52 @@
+h2 {
+  font-family: "Caveat", cursive;
+  font-size: 2.5rem;
+}
+
+input, button {
+  margin: 5px 0;
+}
+
+input {
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+button {
+  border-radius: 5px;
+  background-color: blueviolet;
+  border-color: blueviolet;
+  color: white;
+  opacity: 0.9;
+}
+
+ul {
+  display:flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+  min-width: 400px;
+  align-items: center;
+  justify-content: center;
+}
+
+li {
+  font-family: "Caveat", cursive;
+  padding: 10px;
+  margin-bottom: 5px;
+  min-width: 400px;
+  background: rgb(238,174,202);
+  background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,0.22349450033919815) 100%);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+}
+
+li input[type="checkbox"] {
+  margin-right: 10px;
+  border: 2px solid #111;
+}
+
+
+
+
