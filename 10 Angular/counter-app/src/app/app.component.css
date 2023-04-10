@@ -1,18 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Life+Savers&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Life+Savers&display=swap");
 
 .container {
-    background-image: url(../assets/bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:flex-start;
-}
-
-.credits {
-    float: right;
-
+  background-image: url(../assets/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }

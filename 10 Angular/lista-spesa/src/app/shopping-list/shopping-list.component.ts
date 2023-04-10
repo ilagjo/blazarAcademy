@@ -33,10 +33,6 @@ export class ShoppingListComponent {
     this.inputValue = '';
   }
 
-  /*clearList(): void {
-    this.items = [];
-  } */
-
   completeItem(item: ShoppingListItem): void {
     item.completed = !item.completed;
   }

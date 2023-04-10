@@ -32,7 +32,8 @@
             (blur)="updateLabel(i, historyLabels[i].trim())"
             [placeholder]="'Result ' + (i + 1)"
             [id]="'label-' + i"
-            #myInput (keydown.enter)="myInput.blur()"
+            #myInput
+            (keydown.enter)="myInput.blur()"
           />
         </td>
       </tr>
