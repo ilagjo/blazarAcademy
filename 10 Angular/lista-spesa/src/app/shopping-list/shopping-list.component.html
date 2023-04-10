@@ -1,0 +1,28 @@
+<div id="container">
+  <label>{{ today }}</label
+  ><br />
+  <input
+    type="text"
+    placeholder="Cosa comprare?"
+    [(ngModel)]="inputValue"
+    (keydown)="inputKeyDown($event)"
+  />
+
+  <button id="add-btn" (click)="addItem(inputValue); clearInput()">
+    Aggiungi
+  </button>
+  <ul id="list">
+    <li
+      *ngFor="let item of items"
+      [class.completed]="item.completed"
+      (click)="completeItem(item)"
+      (dblclick)="items.splice(items.indexOf(item), 1)"
+    >
+      {{ item.text }}
+    </li>
+  </ul>
+  <div id="buttons-wrapper">
+    <button id="fill-btn" (click)="autofill()">Auto-fill</button>
+    <button id="archive-btn" (click)="archiveCompletedItems()">Azzera</button>
+  </div>
+</div>
