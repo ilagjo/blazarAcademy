@@ -4,16 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const table = createTable();
 
   usersTableContainer.appendChild(table);
-  const headerRow = table.insertRow();
-  ["Name", "Username", "Email", "Phone"].forEach((header) => {
-    const th = document.createElement("th");
-    th.style.textAlign = "center";
-    th.style.backgroundColor = "#f5f5f5";
-    th.style.color = "#555";
-    th.style.fontWeight = "600";
-    th.innerText = header;
-    headerRow.appendChild(th);
-  });
+  addHeadersToTable(table);
 
   fetch("https://jsonplaceholder.typicode.com/users")
     .then((response) => response.json())
@@ -119,6 +110,19 @@ document.addEventListener("DOMContentLoaded", function () {
   usersTableContainer.insertAdjacentElement("beforebegin", abbr);
 
 });
+function addHeadersToTable(table) {
+  const headerRow = table.insertRow();
+  ["Name", "Username", "Email", "Phone"].forEach((header) => {
+    const th = document.createElement("th");
+    th.style.textAlign = "center";
+    th.style.backgroundColor = "#f5f5f5";
+    th.style.color = "#555";
+    th.style.fontWeight = "600";
+    th.innerText = header;
+    headerRow.appendChild(th);
+  });
+}
+
 function createTable() {
   const table = document.createElement("table");
   const caption = table.createCaption();
