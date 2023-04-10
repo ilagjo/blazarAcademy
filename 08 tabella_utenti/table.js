@@ -1,18 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const usersTableContainer = document.getElementById("usersTable");
 
-  const table = document.createElement("table");
-  const caption = table.createCaption();
-  caption.style.captionSide = "bottom";
-  caption.style.marginTop = "5px";
-  caption.style.padding = "5px";
-  caption.style.fontStyle = "italic";
-  caption.style.fontSize = "10px";
-  caption.innerText = "Tabella Utenti: esercizio javascript - ";
-  const link = document.createElement("a");
-  link.href = "https://jsonplaceholder.typicode.com/users";
-  link.innerText = "fonte dati";
-  caption.appendChild(link);
+  const table = createTable();
 
   usersTableContainer.appendChild(table);
   const headerRow = table.insertRow();
@@ -130,3 +119,19 @@ document.addEventListener("DOMContentLoaded", function () {
   usersTableContainer.insertAdjacentElement("beforebegin", abbr);
 
 });
+function createTable() {
+  const table = document.createElement("table");
+  const caption = table.createCaption();
+  caption.style.captionSide = "bottom";
+  caption.style.marginTop = "5px";
+  caption.style.padding = "5px";
+  caption.style.fontStyle = "italic";
+  caption.style.fontSize = "10px";
+  caption.innerText = "Tabella Utenti: esercizio javascript - ";
+  const link = document.createElement("a");
+  link.href = "https://jsonplaceholder.typicode.com/users";
+  link.innerText = "fonte dati";
+  caption.appendChild(link);
+  return table;
+}
+
