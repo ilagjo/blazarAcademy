@@ -1,0 +1,3 @@
+Credo che tu possa lavorare un po' di più sulla creazione di funzioni per migliorare la leggibilità e la struttura del codice.
+Uno sviluppatore dovrebbe aprire il tuo js e capire in tempi brevi a grandi linee cosa fa il codice...
+Usa funzioni per astrarre concetti. (ti ho lasciato alcuni esempi).

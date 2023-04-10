@@ -1,30 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
   const usersTableContainer = document.getElementById("usersTable");
 
-  const table = document.createElement("table");
-  const caption = table.createCaption();
-  caption.style.captionSide = "bottom";
-  caption.style.marginTop = "5px";
-  caption.style.padding = "5px";
-  caption.style.fontStyle = "italic";
-  caption.style.fontSize = "10px";
-  caption.innerText = "Tabella Utenti: esercizio javascript - ";
-  const link = document.createElement("a");
-  link.href = "https://jsonplaceholder.typicode.com/users";
-  link.innerText = "fonte dati";
-  caption.appendChild(link);
+  const table = createTable();
 
   usersTableContainer.appendChild(table);
-  const headerRow = table.insertRow();
-  ["Name", "Username", "Email", "Phone"].forEach((header) => {
-    const th = document.createElement("th");
-    th.style.textAlign = "center";
-    th.style.backgroundColor = "#f5f5f5";
-    th.style.color = "#555";
-    th.style.fontWeight = "600";
-    th.innerText = header;
-    headerRow.appendChild(th);
-  });
+  addHeadersToTable(table);
 
   fetch("https://jsonplaceholder.typicode.com/users")
     .then((response) => response.json())
@@ -92,14 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   /* Fuori richiesta */
-  const backButton = document.createElement("button");
-  backButton.innerText = "\u2190 Back";
-  backButton.style.marginRight = "5px";
-  backButton.style.marginBottom = "16px";
-  backButton.style.border = "none";
-  backButton.style.background = "transparent";
-  backButton.style.fontSize = "20px";
-  backButton.style.fontFamily = "Caveat";
+  const backButton = createBackButton();
 
   const buttonLink = document.createElement("a");
   buttonLink.href = "https://github.com/ilagjo/blazarAcademy";
@@ -130,3 +103,44 @@ document.addEventListener("DOMContentLoaded", function () {
   usersTableContainer.insertAdjacentElement("beforebegin", abbr);
 
 });
+function createBackButton() {
+  const backButton = document.createElement("button");
+  backButton.innerText = "\u2190 Back";
+  backButton.style.marginRight = "5px";
+  backButton.style.marginBottom = "16px";
+  backButton.style.border = "none";
+  backButton.style.background = "transparent";
+  backButton.style.fontSize = "20px";
+  backButton.style.fontFamily = "Caveat";
+  return backButton;
+}
+
+function addHeadersToTable(table) {
+  const headerRow = table.insertRow();
+  ["Name", "Username", "Email", "Phone"].forEach((header) => {
+    const th = document.createElement("th");
+    th.style.textAlign = "center";
+    th.style.backgroundColor = "#f5f5f5";
+    th.style.color = "#555";
+    th.style.fontWeight = "600";
+    th.innerText = header;
+    headerRow.appendChild(th);
+  });
+}
+
+function createTable() {
+  const table = document.createElement("table");
+  const caption = table.createCaption();
+  caption.style.captionSide = "bottom";
+  caption.style.marginTop = "5px";
+  caption.style.padding = "5px";
+  caption.style.fontStyle = "italic";
+  caption.style.fontSize = "10px";
+  caption.innerText = "Tabella Utenti: esercizio javascript - ";
+  const link = document.createElement("a");
+  link.href = "https://jsonplaceholder.typicode.com/users";
+  link.innerText = "fonte dati";
+  caption.appendChild(link);
+  return table;
+}
+
