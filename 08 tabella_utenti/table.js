@@ -72,14 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   /* Fuori richiesta */
-  const backButton = document.createElement("button");
-  backButton.innerText = "\u2190 Back";
-  backButton.style.marginRight = "5px";
-  backButton.style.marginBottom = "16px";
-  backButton.style.border = "none";
-  backButton.style.background = "transparent";
-  backButton.style.fontSize = "20px";
-  backButton.style.fontFamily = "Caveat";
+  const backButton = createBackButton();
 
   const buttonLink = document.createElement("a");
   buttonLink.href = "https://github.com/ilagjo/blazarAcademy";
@@ -110,6 +103,18 @@ document.addEventListener("DOMContentLoaded", function () {
   usersTableContainer.insertAdjacentElement("beforebegin", abbr);
 
 });
+function createBackButton() {
+  const backButton = document.createElement("button");
+  backButton.innerText = "\u2190 Back";
+  backButton.style.marginRight = "5px";
+  backButton.style.marginBottom = "16px";
+  backButton.style.border = "none";
+  backButton.style.background = "transparent";
+  backButton.style.fontSize = "20px";
+  backButton.style.fontFamily = "Caveat";
+  return backButton;
+}
+
 function addHeadersToTable(table) {
   const headerRow = table.insertRow();
   ["Name", "Username", "Email", "Phone"].forEach((header) => {
