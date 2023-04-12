@@ -1,0 +1,13 @@
+<div class="user-info-bar">
+    <img src="https://picsum.photos/150/150" alt="Profile Avatar">
+    <div>
+      <h1>{{ user.name }} </h1>
+      <h2>{{ user.username }}</h2>
+    </div>
+  </div>
+  
+  <section>
+    <h2>Post recenti:</h2>
+    <app-post *ngFor="let post of posts;" [post]="post"></app-post>
+  </section>
+

@@ -1,0 +1,5 @@
+<app-profile
+  *ngIf="user$ | async as thirdUser"
+  [user]="thirdUser"
+  [posts]="(posts$ | async) || []"
+></app-profile>
