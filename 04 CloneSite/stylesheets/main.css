@@ -1,0 +1,395 @@
+* {
+  box-sizing: content-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+  background-color: white;
+}
+
+h2,
+h4 {
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 900;
+  font-size: 3.75rem;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+header {
+  background-color: white;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1); /* mi serve solo come riscontro ELIMINARE */
+  /*position: fixed;*/
+  width: 100%;
+  z-index: 1;
+  color: #111111;
+}
+
+header .nav-container {
+  display: flex;
+  justify-content: space-between;
+  flex: 0 0 auto;
+}
+
+header .logo,
+header .navbar .page {
+  padding: 10px 20px;
+  margin: auto 0;
+}
+
+header .nav-container a.page:hover {
+  color: red;
+}
+
+header .nav-container a.page[href="#"] {
+  color: #478ac9;
+}
+
+header #menu-btn {
+  display: none;
+}
+
+/*** SECTION ***/
+
+
+section img {
+  z-index: -200;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  overflow: hidden;
+  object-fit: cover;
+  display: block;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.layout {
+  margin-top: -56px;
+}
+
+.layout-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.layout .layout-row {
+  display: flex;
+  justify-content: center;
+
+  flex-direction: row;
+}
+
+.layout .card-layout {
+  padding: 30px;
+  color: white;
+}
+
+.layout .layout-row #one {
+  background-color: #111111;
+}
+
+.layout .layout-row #two {
+  background-color: #858e99;
+}
+
+.layout .layout-row #three {
+  background-color: #478ac9;
+}
+
+.layout .layout-row #four {
+  background-color: #77aad9;
+}
+
+.card.layout .line-1,
+.circle-icon {
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.card-layout .circle-icon {
+  margin-top: 30px;
+  margin-bottom: 0;
+  height: 64px;
+  width: 64px;
+  text-align: left;
+  display: block;
+}
+
+.credits {
+  font-size: 16px;
+  margin: 30px auto 40px;
+  text-align: center;
+}
+
+.credits a {
+  color: #77aad9;
+}
+
+footer {
+  color: white;
+  background-color: #111111;
+}
+
+footer div {
+  text-align: center;
+  padding: 50px;
+}
+
+footer p {
+  font-size: 14px;
+  width: 417px;
+  padding: 0;
+  margin: 49px auto;
+}
+
+/*** BACKLINK SECTION ***/
+
+.backlink {
+  font-size: 12.8px;
+  text-align: center;
+  padding: 16px;
+  margin: 0;
+  background-color: #111111;
+}
+
+.backlink > * {
+  display: inline;
+}
+
+.backlink p {
+  margin: 0 5px;
+  color: white;
+}
+
+.backlink a {
+  color: #77aad9;
+}
+
+@media (min-width: 999px) {
+  .nav-icon,
+  .menu,
+  .menu-icon {
+    display: none;
+  }
+
+  header .nav-container {
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .navbar li {
+    display: inline-block;
+    margin: 5px;
+  }
+
+  .navbar li .page {
+    color: grey;
+    text-decoration: none;
+    list-style-type: none;
+  }
+
+  .navbar .page:active {
+    color: #478ac9;
+  }
+
+  .menu .xmark {
+    display: none;
+  }
+
+  .layout-wrap {
+    margin-top: -60px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+  .layout {
+    display: flex;
+    justify-content: center;
+  }
+
+  .layout-row {
+    display: flex;
+    flex-wrap: nowrap;
+    max-width: 980px;
+    flex-shrink: 1;
+  }
+
+  .card {
+    max-width: 25%;
+  }
+
+  .card-layout {
+    flex-shrink: 1;
+  }
+}
+
+@media (max-width: 998px) {
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    min-height: 80px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    max-width: 64px;
+    max-height: 64px;
+    width: 100%;
+    height: 100%;
+    margin-left: 0px;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .menu-icon {
+    padding: 20px;
+    cursor: pointer; /* per finestra desktop ridimensionata */
+  }
+
+  .menu-icon .nav-icon {
+    background-color: black;
+  }
+
+  .menu-icon .nav-icon:hover {
+    background-color: orangered;
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    display: inline-block;
+    padding: 0 5px 0 0;
+    margin: 0 0 0 -500px;
+    list-style: none;
+    overflow: hidden;
+    background-color: black;
+    height: 100vh;
+    z-index: 999999999;
+    width: 250px;
+  }
+
+  header .menu-btn:checked ~ .menu-icon > .nav-icon {
+    background-color: orangered; /* resta arancione fino al click successivo */
+  }
+
+  header .menu-btn:checked ~ .menu {
+    transform: translateX(500px);
+    transition-duration: 2s;
+  }
+
+  .menu .xmark {
+    display: inline;
+    float: right;
+  }
+
+  .menu li a {
+    clear: both;
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .menu li a:hover {
+    color: grey;
+  }
+
+  .layout-wrap {
+    margin-top: -57px;
+    width: 100%;
+  }
+
+  .layout {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .layout-row {
+    width: 100%;
+  }
+  .card {
+    width: 25%;
+  }
+  .card-layout {
+    flex-shrink: 1;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 998px) {
+  .layout-wrap {
+    flex-wrap: wrap;
+  }
+
+  .layout {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .layout-row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 900px;
+  }
+
+ .card {
+  width: 360px;
+ }
+
+  .card-layout {
+    flex-shrink: 0;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 767px) {
+  .layout-wrap {
+    flex-wrap: wrap;
+  }
+
+  .layout {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .layout-row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 750px;
+  }
+
+ .card {
+  width: 360px;
+ }
+
+ 
+}
+
+
+ 
+
+
