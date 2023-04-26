@@ -2,36 +2,6 @@
   font-family: "Life Savers", cursive;
 }
 
-h2 {
-  margin: 30px 10rem;
-  font-size: 3rem;
-}
-
-button {
-  display: inline-block;
-  margin: 30px;
-  height: 60px;
-  width: 60px;
-  font-size: 2rem;
-}
-
-button:first-child {
-  margin-left: 10rem;
-}
-
-.cmd {
-  width: fit-content;
-}
-
-.cmd:last-child {
-  margin: 0;
-}
-
-span {
-  display: inline-block;
-  font-size: 4rem;
-}
-
 .history {
   position: fixed;
   top: 0;
