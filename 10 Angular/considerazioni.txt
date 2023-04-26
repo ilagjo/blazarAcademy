@@ -1,0 +1,23 @@
+Ciao Ilaria. Congratulazioni per aver completato il corso!
+Sono davvero soddisfatto dei tuoi progressi. Complimenti anche per la proattività nello svolgimento degli esercizi.
+Mi dimostra che ce l'hai messa tutta.
+
+Ho rifattorizzato un po' la tua counter app perchè il componente counter....non era più solo un counter. 
+Magari si sarebbe dovuto chiamare "counter-with-history-table" o qualcosa del genere.
+Creare un componente, o una funzione, è come astrarre un concetto (Es. i giorni da lunedì a domenica possiamo anche chiamarli "settimana". "settimana" è un concetto di più alto livello rispetto a "giorno")
+Queste "astrazioni" non sono solo degli strumenti meccanici per lo svolgimento dell'applicazione, sono anche strumenti di comunicazione del significato dell'applicazione.
+Quella tabella che conteneva il record dei numeri era evidentemente una cosa a parte, con un suo significato.
+Fai caso a come ho progressivamente sistemato il codice senza cambiare il funzionamento esterno (refactoring).
+
+Ricorda di pulire il codice e rifattorizzare prima di fare git push: 
+ - crea nuovi componenti che rappresentano elementi logici dell'applicazione a cui ti sembra logico dare un nome (es. Todo-list, todo-item).
+ - rimuovi componenti che non sembrano avere più un senso logico, e il cui nome non significa niente.
+ - scomponi le funzioni troppo lunghe e con troppi parametri. Una funzione deve fare una sola cosa...
+ - rinomina funzioni e variabili se pensi che il loro nome può migliorare ed essere più esplicito.
+ - semplifica le logiche con i boolean il più possibile, meno if (e meno if innestati) ci sono, e più il codice è facile da leggere.
+ etc. etc.
+
+Ovviamente non è finita qui. Non si finisce mai di migliorare. 
+Cerca di rendere il codice leggibile, studia nuove tecniche per farlo. Questo è un lavoro di squadra.
+Allarga la tua comprensione della programmazione imparando nuovi linguaggi e nuove tecnologie e nuovi ambiti. 
+Sperimenta in continuazione, anche a costo di sbagliare. C'è sempre git per rimediare agli errori.
