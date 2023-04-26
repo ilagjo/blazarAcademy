@@ -30,10 +30,6 @@ export class CounterComponent {
     this.showHistory = false;
   }
 
-  updateLabel(index: number, label: string) {
-    this.historyLabels[index] = label;
-  }
-
   toggleTable()  {
     this.showHistory = !this.showHistory;
   }
