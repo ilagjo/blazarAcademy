@@ -1,3 +1,5 @@
+import { EventEmitter } from '@angular/core';
+import { Output } from '@angular/core';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,10 +9,9 @@ import { Component } from '@angular/core';
 })
 
 export class CounterComponent {
+  @Output() counterReset = new EventEmitter<number>()
+  @Output() historyClicked = new EventEmitter();
   count: number = 0;
-  showHistory: boolean = false;
-  historyList: number[] = [];
-  historyLabels: string[] = [];
 
   increment() {
     this.count++;
@@ -21,16 +22,7 @@ export class CounterComponent {
   }
 
   reset() {
-    this.showHistory = true;
-    this.historyList.push(this.count);
+    this.counterReset.emit(this.count);
     this.count = 0;
-  }
-  
-  closeHistory() {
-    this.showHistory = false;
-  }
-
-  toggleTable()  {
-    this.showHistory = !this.showHistory;
   }
 }

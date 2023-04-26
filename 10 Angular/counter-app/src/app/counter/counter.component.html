@@ -1,16 +1,8 @@
-<h2>Counter App</h2>
 <div class="counter">
   <button (click)="decrement()">-</button>
   <span>{{ count }}</span>
   <button (click)="increment()">+</button>
   <button class="cmd" (click)="reset()">Reset</button>
-  <button class="cmd" (click)="toggleTable()">History</button>
+  <button class="cmd" (click)="historyClicked.emit()">History</button>
 </div>
 
-<app-history-sidebar 
-  *ngIf="showHistory" 
-  [historyLabels]="historyLabels"
-  [historyList]="historyList"
-  (close)="closeHistory()"
-  >
-</app-history-sidebar>

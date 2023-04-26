@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Life+Savers&display=swap");
 
+h2 {
+  margin: 30px 10rem;
+  font-size: 3rem;
+}
+
 .container {
   background-image: url(../assets/bg.jpg);
   background-repeat: no-repeat;

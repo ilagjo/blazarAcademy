@@ -1,3 +1,15 @@
 <div class="container">
-  <app-counter></app-counter>
- </div>
+  <h2>Counter App</h2>
+  <app-counter
+    (counterReset)="onCounterReset($event)"
+    (historyClicked)="toggleTable()"
+  ></app-counter>
+
+  <app-history-sidebar
+    *ngIf="showHistory"
+    [historyLabels]="historyLabels"
+    [historyList]="historyList"
+    (close)="closeHistory()"
+  >
+  </app-history-sidebar>
+</div>

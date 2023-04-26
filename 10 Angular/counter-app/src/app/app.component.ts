@@ -7,4 +7,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'counter-app';
+  
+  showHistory: boolean = false;
+  historyList: number[] = [];
+  historyLabels: string[] = [];
+
+  
+  closeHistory() {
+    this.showHistory = false;
+  }
+
+  toggleTable() {
+    this.showHistory = !this.showHistory;
+  }
+
+  onCounterReset(lastCount: number) {
+    this.showHistory = true;
+    this.historyList.push(lastCount);
+  }
 }
